@@ -44,7 +44,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "eslint" }
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "html_ls" }
       })
     end
   },
@@ -57,9 +57,9 @@ return {
       local on_attach = function(client, bufnr)
         if client.server_capabilities.documentFormattingProvider then
           vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            callback = function()
-              vim.lsp.buf.format({ async = false })
+            pattern = "*",
+            callback = function(args)
+              require("conform").format({ bufnr = args.buf })
             end,
           })
         end
@@ -100,6 +100,7 @@ return {
           "javascriptreact",
         },
       })
+      lspconfig.ts_ls.setup({})
 
       vim.diagnostic.config({
         underline = true,
