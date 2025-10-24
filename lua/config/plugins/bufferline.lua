@@ -26,7 +26,7 @@ return {
       local opts = { noremap = true, silent = true }
       vim.keymap.set("n", "<leader>q", "<cmd>bdelete<CR>", opts)
       vim.keymap.set("n", "<leader>n", "<cmd>BufferLineCycleNext<CR>", opts)
-      vim.keymap.set("n", "<leader>p", "<cmd>BufferLineCyclePrev<CR>", opts)
+      vim.keymap.set("n", "<leader>m", "<cmd>BufferLineCyclePrev<CR>", opts)
     end,
   },
 }

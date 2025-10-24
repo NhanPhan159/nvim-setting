@@ -29,7 +29,6 @@ return {
           return '<Ignore>'
         end, 'Previous Git change')
 
-        -- Thao tác với hunk
         map('n', '<leader>hs', gs.stage_hunk, 'Stage hunk')
         map('n', '<leader>hr', gs.reset_hunk, 'Reset hunk')
         map('n', '<leader>hp', gs.preview_hunk, 'Preview hunk')

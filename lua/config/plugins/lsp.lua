@@ -19,8 +19,8 @@ return {
           end,
         },
         mapping = cmp.mapping.preset.insert({
-          ["<C-Space>"] = cmp.mapping.complete(),            -- bật gợi ý
-          ["<CR>"] = cmp.mapping.confirm({ select = true }), -- enter để chọn
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
           ["<Tab>"] = cmp.mapping.select_next_item(),
           ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         }),

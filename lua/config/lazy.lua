@@ -16,15 +16,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    {
-      "folke/tokyonight.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-      config = function()
-        vim.cmd.colorscheme("tokyonight-night")
-      end,
-    },
+    -- {
+    --   "folke/tokyonight.nvim",
+    --   lazy = false,
+    --   priority = 1000,
+    --   opts = {},
+    --   config = function()
+    --     vim.cmd.colorscheme("tokyonight-night")
+    --   end,
+    -- },
     { import = "config.plugins" }
   },
 })
