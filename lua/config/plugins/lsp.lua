@@ -1,6 +1,6 @@
 return {
   {
-    "hrsh7th/nvim-cmp",
+        "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "L3MON4D3/LuaSnip",
@@ -44,7 +44,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "eslint", "html_ls" }
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "clangd" }
       })
     end
   },
@@ -100,7 +100,12 @@ return {
           "javascriptreact",
         },
       })
-      lspconfig.ts_ls.setup({})
+      lspconfig.clangd.setup(
+        {
+          capabilities = capabilities,
+          on_attach = on_attach,
+        }
+      )
 
       vim.diagnostic.config({
         underline = true,

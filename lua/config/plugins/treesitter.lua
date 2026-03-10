@@ -10,8 +10,8 @@ return {
       end
       require 'nvim-treesitter.configs'.setup {
         on_attach = on_attach,
-        ensure_installed = { "c", "javascript", "typescript", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-        auto_install = false,
+        ensure_installed = { "cpp", "c", "javascript", "typescript", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+        auto_install = true,
 
         --  ignore_install = { "javascript" },
         highlight = {
