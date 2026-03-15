@@ -3,14 +3,17 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap_api = vim.api.nvim_set_keymap
+local keymap_set = vim.keymap.set
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<S-n>", "<C-w>l", opts)
-keymap("n", "<S-h>", "<C-w>h", opts)
-keymap("n", "<S-j>", "<C-w>j", opts)
-keymap("n", "<S-k>", "<C-w>k", opts)
-keymap("n", "[e", vim.diagnostics.goto_next, opts)
-keymap("n", "]e", vim.diagnostics.goto_prev, opts)
-keymap("n", "<leader>1", "%", opts)
+keymap_api("n", "<S-n>", "<C-w>l", opts)
+keymap_api("n", "<S-h>", "<C-w>h", opts)
+keymap_api("n", "<S-j>", "<C-w>j", opts)
+keymap_api("n", "<S-k>", "<C-w>k", opts)
+
+-- Action with code
+keymap_set("n", "K", function()
+  vim.lsp.buf.hover({ border = "rounded" })
+end, { desc = "show documentation" }, opts)
