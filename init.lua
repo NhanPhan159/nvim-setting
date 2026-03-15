@@ -20,8 +20,9 @@ vim.api.nvim_set_hl(0, 'NeoTreeEndOfBuffer', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NvimTreeVertSplit', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { bg = 'none' })
-vim.g.mapleader = " "
+vim.g.mapleader = " ";
 
-require("config.lazy")
 require("config.options")
+require("config.lazy")
 require("config.keymaps")
+-- require("config.autocommand")
