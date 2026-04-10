@@ -44,7 +44,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "eslint", "clangd" }
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "clangd", "ast-grep", "slint_lsp" }
       })
     end
   },
@@ -64,6 +64,7 @@ return {
           })
         end
       end
+      lspconfig.slint_lsp.setup({})
 
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
@@ -106,6 +107,10 @@ return {
           on_attach = on_attach,
         }
       )
+      lspconfig.ast_grep.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+      }
 
       vim.diagnostic.config({
         underline = true,
