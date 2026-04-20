@@ -5,8 +5,12 @@ local options = {
   shiftwidth = 2,
   virtualedit = "block",
   inccommand = "split",
-  ignorecase = true
+  ignorecase = true,
 }
+
+
+
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end

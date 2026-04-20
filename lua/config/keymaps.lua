@@ -30,3 +30,7 @@ end, { desc = "Open file explore" }, opts)
 keymap_set("n", "K", function()
   vim.lsp.buf.hover({ border = "rounded" })
 end, { desc = "show documentation" }, opts)
+
+
+-- Fold methods
+keymap_set('n', 'zm', require('ufo').closeFoldsWith)
