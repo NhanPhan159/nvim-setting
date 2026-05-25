@@ -6,13 +6,18 @@ local options = {
   virtualedit = "block",
   inccommand = "split",
   ignorecase = true,
+  updatetime = 500
 }
-
-
-
-
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
 vim.g.lazyvim_cmp = "auto"
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    border = 'rounded',
+    wrap = true,
+    width = 80,
+  },
+})
