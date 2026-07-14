@@ -16,13 +16,29 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
+    {
+      "EdenEast/nightfox.nvim", -- lazy,
+      name = "nightfox",
+      priority = 1000,
+      config = function()
+        vim.cmd.colorscheme("dayfox")
+      end,
+    },
+    -- {
+    --   "catppuccin/nvim",
+    --   name = "catppuccin",
+    --   priority = 1000,
+    --   config = function()
+    --     vim.cmd.colorscheme("catppuccin-latte")
+    --   end,
+    -- },
     -- {
     --   "folke/tokyonight.nvim",
     --   lazy = false,
     --   priority = 1000,
     --   opts = {},
     --   config = function()
-    --     vim.cmd.colorscheme("tokyonight-night")
+    --     vim.cmd.colorscheme("tokyonight-storm")
     --   end,
     -- },
     { import = "config.plugins" }
