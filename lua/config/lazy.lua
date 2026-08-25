@@ -16,6 +16,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
+    -- {
+    --   'sainnhe/everforest',
+    --   lazy = false,
+    --   priority = 1000,
+    --   config = function()
+    --     vim.g.everforest_enable_italic = true
+    --     vim.g.everforest_background = 'soft'
+    --
+    --     vim.o.background = 'light'
+    --     vim.cmd.colorscheme('everforest')
+    --   end
+    -- },
     {
       "EdenEast/nightfox.nvim", -- lazy,
       name = "nightfox",

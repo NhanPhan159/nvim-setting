@@ -21,6 +21,7 @@ vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NvimTreeVertSplit', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { bg = 'none' })
 vim.g.mapleader = " ";
+vim.g.maplocalleader = " ";
 
 require("config.options")
 require("config.lazy")

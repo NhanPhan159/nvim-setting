@@ -10,8 +10,22 @@ return {
     dependencies = { 'neovim/nvim-lspconfig', 'mason-org/mason.nvim' },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "eslint", "clangd", "slint_lsp" }
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "clangd", "slint_lsp", "dartls" }
       })
+
+      vim.lsp.config('dartls', {
+        cmd = { "dart", "language-server", "--protocol=lsp" },
+        filetypes = { "dart" },
+        root_markers = { "pubspec.yaml" },
+        settings = {
+          dart = {
+            completeFunctionCalls = true,
+            showTodos = true,
+          }
+        }
+      })
+
+      vim.lsp.enable('dartls')
     end
   },
   {

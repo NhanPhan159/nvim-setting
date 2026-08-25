@@ -13,6 +13,8 @@ for k, v in pairs(options) do
 end
 
 vim.g.lazyvim_cmp = "auto"
+vim.g.neon_style = "light"
+
 vim.diagnostic.config({
   virtual_text = false,
   float = {
