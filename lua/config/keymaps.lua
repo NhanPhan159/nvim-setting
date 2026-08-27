@@ -34,3 +34,13 @@ end, { desc = "show documentation" }, opts)
 
 -- Fold methods
 keymap_set('n', 'zm', require('ufo').closeFoldsWith)
+
+-- Jump to error lines
+
+keymap_set('n', ']d', vim.diagnostic.goto_next, {
+  desc = 'Next diagnostic',
+})
+
+keymap.set('n', '[d', vim.diagnostic.goto_prev, {
+  desc = 'Previous diagnostic',
+})
