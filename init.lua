@@ -27,3 +27,7 @@ require("config.options")
 require("config.lazy")
 require("config.keymaps")
 require("config.autocommand")
+local socket = '/tmp/nvim'
+if vim.fn.filereadable(socket) == 0 then
+  vim.fn.serverstart(socket)
+end

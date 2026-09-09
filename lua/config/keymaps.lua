@@ -41,6 +41,6 @@ keymap_set('n', ']d', vim.diagnostic.goto_next, {
   desc = 'Next diagnostic',
 })
 
-keymap.set('n', '[d', vim.diagnostic.goto_prev, {
+keymap_set('n', '[d', vim.diagnostic.goto_prev, {
   desc = 'Previous diagnostic',
 })

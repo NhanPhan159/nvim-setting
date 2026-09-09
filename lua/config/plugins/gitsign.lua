@@ -3,18 +3,17 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
     local gitsigns = require('gitsigns')
-    vim.api.nvim_set_hl(0, 'GitSignsAddLine', {
-      bg = '#193a2a',
+    vim.api.nvim_set_hl(0, "GitSignsAddLn", {
+      link = "DiffAdd",
     })
 
-    vim.api.nvim_set_hl(0, 'GitSignsChangeLine', {
-      bg = '#193a2a',
+    vim.api.nvim_set_hl(0, "GitSignsChangeLn", {
+      link = "DiffChange",
     })
 
-    vim.api.nvim_set_hl(0, 'GitSignsDeleteLine', {
-      bg = '#f85149',
+    vim.api.nvim_set_hl(0, "GitSignsDeleteLn", {
+      link = "DiffDelete",
     })
-
     vim.api.nvim_set_hl(0, 'GitSignsDelete', {
       fg = '#f85149',
     })

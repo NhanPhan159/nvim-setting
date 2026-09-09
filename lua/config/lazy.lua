@@ -17,6 +17,16 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- {
+    --   "navarasu/onedark.nvim",
+    --   priority = 1000, -- make sure to load this before all the other start plugins
+    --   config = function()
+    --     require('onedark').setup {
+    --       style = 'cool'
+    --     }
+    --     require('onedark').load()
+    --   end
+    -- },
+    -- {
     --   'sainnhe/everforest',
     --   lazy = false,
     --   priority = 1000,
@@ -28,31 +38,31 @@ require("lazy").setup({
     --     vim.cmd.colorscheme('everforest')
     --   end
     -- },
-    {
-      "EdenEast/nightfox.nvim", -- lazy,
-      name = "nightfox",
-      priority = 1000,
-      config = function()
-        vim.cmd.colorscheme("dayfox")
-      end,
-    },
     -- {
-    --   "catppuccin/nvim",
-    --   name = "catppuccin",
+    --   "EdenEast/nightfox.nvim", -- lazy,
+    --   name = "nightfox",
     --   priority = 1000,
     --   config = function()
-    --     vim.cmd.colorscheme("catppuccin-latte")
+    --     vim.cmd.colorscheme("dayfox")
     --   end,
     -- },
-    -- {
-    --   "folke/tokyonight.nvim",
-    --   lazy = false,
-    --   priority = 1000,
-    --   opts = {},
-    --   config = function()
-    --     vim.cmd.colorscheme("tokyonight-storm")
-    --   end,
-    -- },
+     {
+       "catppuccin/nvim",
+       name = "catppuccin",
+       priority = 1000,
+       config = function()
+         vim.cmd.colorscheme("catppuccin-latte")
+       end,
+     },
+    --{
+    --  "folke/tokyonight.nvim",
+    --  lazy = false,
+     --  priority = 1000,
+ --      opts = {},
+   --    config = function()
+     --    vim.cmd.colorscheme("tokyonight-day")
+--      end,
+   --  },
     { import = "config.plugins" }
   },
 })
